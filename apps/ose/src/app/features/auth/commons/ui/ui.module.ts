@@ -5,7 +5,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
 @NgModule({
   exports: [
     MatFormFieldModule,
@@ -13,7 +16,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    DialogModule,
+    InputTextModule,
+    CardModule,
+    ButtonModule
   ]
 })
 export class UiModule { }

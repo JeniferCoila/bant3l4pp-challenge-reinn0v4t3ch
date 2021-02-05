@@ -1,4 +1,4 @@
-
+<!-- 
 <mat-drawer-container>
   <mat-drawer #drawer class="mat-elevation-z4" mode="side" opened>
     <app-menu [name]="presenter.name" [options]="presenter.menuOpts"></app-menu>
@@ -24,4 +24,37 @@
         <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>
-</mat-drawer-container>
+</mat-drawer-container> -->
+<!-- <button pbutton (click)="display = true" >
+  <mat-icon>menu</mat-icon>
+</button>
+<p-sidebar [(visible)]="display" class="mat-elevation-z4">
+  <div>
+
+    <span>Administrador</span>
+  </div>
+
+  <button (click)="presenter.closeSession()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Cerrar Sesión</span>
+  </button>
+</p-sidebar>
+ -->
+
+<p-menubar  [model]="items">
+  <ng-template pTemplate="start">
+    <a>
+      <img src="../../../../../../assets/img/logo-BANTEL-1.png" height="40" class="p-mr-2">
+    </a>
+</ng-template>
+ <!--  <ng-template pTemplate="item" let-item let-i="index"> 
+    <div>
+      <span>{{item.label}}</span>
+   </div>
+  </ng-template>
+  <img src="../../../../../../assets/img/logo-BANTEL-1.png" /> -->
+</p-menubar >
+
+<div class="page-container">
+  <router-outlet></router-outlet>
+</div>

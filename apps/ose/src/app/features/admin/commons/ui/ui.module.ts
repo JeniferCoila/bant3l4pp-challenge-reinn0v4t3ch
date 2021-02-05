@@ -11,6 +11,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {SidebarModule} from 'primeng/sidebar';
+import {MenubarModule} from 'primeng/menubar';
+import {TabMenuModule} from 'primeng/tabmenu';
+import {GalleriaModule} from 'primeng/galleria';
 
 @NgModule({
   exports: [
@@ -25,7 +29,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    SidebarModule,
+    MenubarModule,
+    TabMenuModule,
+    GalleriaModule
+
   ]
 })
 export class UiModule { }
