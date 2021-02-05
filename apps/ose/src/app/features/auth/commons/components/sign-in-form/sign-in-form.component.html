@@ -1,0 +1,67 @@
+<div class="b-login">
+  <div class="b-login-bg">
+
+  </div>
+  <div class="b-login-card">
+    <p-card>
+      <div class="b-login-card-logo">
+        <img src="../../../../../../assets/img/logo-BANTEL-1.png">
+      </div>
+      <div class="b-login-card-content">
+        <form class="b-login-card-content--form" [formGroup]="signInForm" (ngSubmit)="sendData()">
+          <div class="p-fluid p-grid b-login-card-content--form--input-group">
+            <div class="p-field p-col-11 b-login-card-content--form--input-group-user">
+              <span class="p-float-label">
+                <input type="text" id="user_name" formControlName="email" pInputText />
+                <label for="user_name">Email</label>
+              </span>
+            </div>
+            <div class="p-field p-col-11 b-login-card-content--form--input-group-psw">
+              <span class="p-float-label">
+                <input [type]="button.type" id="user_password" formControlName="password" pInputText />
+                <ose-button-visibily-password #button></ose-button-visibily-password>
+                <label for="user_password">Contraseña</label>
+              </span>
+            </div>
+          </div>
+          <div class="p-fluid p-grid b-login-card-content--form--button-group">
+            <button pButton type="button" label="Registrarse"></button>
+            <button pButton label="Ingresar" [disabled]="signInForm.invalid"></button>
+
+          </div>
+
+          <!--   <form [formGroup]="signInForm" (ngSubmit)="sendData()"  >
+
+  <mat-card>
+
+    <h1 mat-card-title>Ingresar</h1>
+
+    <mat-card-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Usuario:</mat-label>
+        <input matInput formControlName="email" >
+        <mat-error *ngIf="emailError">{{ emailError }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña:</mat-label>
+        <input matInput formControlName="password" [type]="button.type">
+        <ose-button-visibily-password matSuffix #button ></ose-button-visibily-password>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" mat-button>Registrarse</button>
+      <button mat-button [disabled]="signInForm.invalid" >Ingresar</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</form>
+ -->
+        </form>
+      </div>
+
+    </p-card>
+  </div>
+
+</div>
