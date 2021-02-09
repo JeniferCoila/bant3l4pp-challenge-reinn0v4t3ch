@@ -3,31 +3,26 @@
     "data":[
         {
             "previewImageSrc": "assets/img/gallery/Banner-Familia.jpg",
-            "thumbnailImageSrc": "assets/img/gallery/galleria1s.jpg",
-            "alt": "Description for Image 1",
-            "title": "Title 1"
+            "alt": "Disfruta de TV y Cable",
+            "title": "Disfruta de TV y Cable"
         },
         {
             "previewImageSrc": "assets/img/gallery/Plan-Duo-min.jpg",
-            "thumbnailImageSrc": "assets/img/gallery/galleria2s.jpg",
-            "alt": "Description for Image 2",
-            "title": "Title 2"
+            "alt": "Experimenta una velocidad distinta de internet",
+            "title": "Experimenta una velocidad distinta de internet"
         },
         {
             "previewImageSrc": "assets/img/gallery/Plan-200-Gamer-min.jpg",
-            "thumbnailImageSrc": "assets/img/gallery/galleria3s.jpg",
-            "alt": "Description for Image 3",
-            "title": "Title 3"
+            "alt": "Realiza tus pagos desde donde estés",
+            "title": "Realiza tus pagos desde donde estés"
         },
         {
             "previewImageSrc": "assets/img/gallery/Pago-online-1-min.jpg",
-            "thumbnailImageSrc": "assets/img/gallery/galleria3s.jpg",
             "alt": "Description for Image 4",
             "title": "Title 4"
         },
         {
             "previewImageSrc": "assets/img/gallery/Pago-online-2-min.jpg",
-            "thumbnailImageSrc": "assets/img/gallery/galleria3s.jpg",
             "alt": "Description for Image 6",
             "title": "Title 6"
         }

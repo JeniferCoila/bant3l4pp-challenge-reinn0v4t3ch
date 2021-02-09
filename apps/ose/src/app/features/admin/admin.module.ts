@@ -9,6 +9,10 @@ import { WorkshopCreateView } from './views/workshop-create/workshop-create.view
 import { WorkshopUpdateView } from './views/workshop-update/workshop-update.view';
 import { InstructorsComponent } from './views/instructors/instructors.component';
 import { DashboardView } from './views/dashboard/dashboard.view';
+import { PendingDocumentsComponent } from './views/pending-documents/pending-documents.component';
+import { PaymentsDoneComponent } from './views/payments-done/payments-done.component';
+import { MyPageComponent } from './views/my-page/my-page.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +21,10 @@ import { DashboardView } from './views/dashboard/dashboard.view';
     WorkshopCreateView,
     WorkshopUpdateView,
     InstructorsComponent,
-    DashboardView
+    DashboardView,
+    PendingDocumentsComponent,
+    PaymentsDoneComponent,
+    MyPageComponent
   ],
   imports: [
     CommonModule,

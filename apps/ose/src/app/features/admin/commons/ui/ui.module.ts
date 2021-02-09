@@ -15,6 +15,13 @@ import {SidebarModule} from 'primeng/sidebar';
 import {MenubarModule} from 'primeng/menubar';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {GalleriaModule} from 'primeng/galleria';
+import {CarouselModule} from 'primeng/carousel';
+import {ButtonModule} from 'primeng/button';
+import {TableModule} from 'primeng/table';
+import {ProgressBarModule} from 'primeng/progressbar';
+import {SliderModule} from 'primeng/slider';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   exports: [
@@ -33,8 +40,14 @@ import {GalleriaModule} from 'primeng/galleria';
     SidebarModule,
     MenubarModule,
     TabMenuModule,
-    GalleriaModule
-
+    GalleriaModule,
+    CarouselModule,
+    ButtonModule,
+    TableModule,
+    ProgressBarModule,
+    SliderModule,
+    MultiSelectModule,
+    DropdownModule
   ]
 })
 export class UiModule { }

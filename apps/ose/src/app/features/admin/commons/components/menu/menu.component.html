@@ -1,4 +1,4 @@
-<div class="menu-header" >
+<!-- <div class="menu-header" >
     <img src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png">
     <h2>{{ name }}</h2>
 </div>
@@ -9,4 +9,19 @@
         <mat-icon mat-list-icon>{{ option.icon }}</mat-icon>
         <div mat-line>{{ option.title }}</div>
     </mat-list-item>
-</mat-nav-list>
+</mat-nav-list> -->
+
+
+<p-menubar  [model]="items" >
+    <ng-template pTemplate="start">
+      <a>
+        <img src="../../../../../../assets/img/logo-BANTEL-1.png" height="40" class="p-mr-2">
+      </a>
+  </ng-template>
+   <!--  <ng-template pTemplate="item" let-item let-i="index"> 
+      <div>
+        <span>{{item.label}}</span>
+     </div>
+    </ng-template>
+    <img src="../../../../../../assets/img/logo-BANTEL-1.png" /> -->
+  </p-menubar >

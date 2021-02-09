@@ -15,6 +15,7 @@ import { ReportChartComponent } from './report-chart/report-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { ReportFormComponent } from './report-form/report-form.component';
 import { HomepageSliderComponent } from './homepage-slider/homepage-slider.component';
+import { HomepagePlansComponent } from './homepage-plans/homepage-plans.component';
 
 
 const COMPONENTS = [
@@ -26,11 +27,13 @@ const COMPONENTS = [
   WorkshopUploadPosterComponent,
   ReportChartComponent,
   ReportFormComponent,
-  HomepageSliderComponent
+  HomepageSliderComponent,
+  HomepagePlansComponent,
+  
 ];
 
 @NgModule({
-  declarations: [ ...COMPONENTS ],
+  declarations: [ ...COMPONENTS, HomepagePlansComponent, HomepageSliderComponent],
   exports: [ ...COMPONENTS ],
   imports: [
     CommonModule,

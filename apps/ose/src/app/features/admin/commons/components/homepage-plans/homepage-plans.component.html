@@ -1,0 +1,38 @@
+<p-carousel styleClass="e-homepage-slider" [value]="plans" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+    <ng-template pTemplate="header">
+        <h2>Nuestros Planes</h2>
+        <p>Hemos diseñado estos paquetes bien agresivos para que no te quedes colgado, aseguramos la máxima velocidad
+        </p>
+    </ng-template>
+    <ng-template let-plan pTemplate="item" class="plan-container-body">
+        <div class="plan-item">
+            <div class="plan-item-content">
+                <div class="p-mb-3 plan-item-content-header">
+                    <h2>{{plan.title}}</h2>
+                    <p>{{plan.subtitle}}</p>
+
+                </div>
+                <div class="plan-item-content-box">
+                    <span>{{plan.price}}<strong>/mes</strong></span>
+                    <div>
+                        <li>
+                            <ul *ngFor="let benefit of plan.benefits">
+                                <img src="assets/img/icons/{{benefit.icon}}">
+                                <span>{{benefit.title}}</span>
+                            </ul>
+                        </li>
+                    </div>
+
+                    <div class="car-buttons p-mt-5">
+                        <p-button type="button" styleClass="p-button p-button-rounded p-mr-2">
+                            Solicitar
+                        </p-button>
+                        <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-arrow-right">
+                            Ver más
+                        </p-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
