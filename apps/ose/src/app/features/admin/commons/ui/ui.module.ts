@@ -22,6 +22,9 @@ import {ProgressBarModule} from 'primeng/progressbar';
 import {SliderModule} from 'primeng/slider';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
+import {FieldsetModule} from 'primeng/fieldset';
+import {PasswordModule} from 'primeng/password';
+import {AvatarModule} from 'primeng/avatar';
 
 @NgModule({
   exports: [
@@ -47,7 +50,10 @@ import {DropdownModule} from 'primeng/dropdown';
     ProgressBarModule,
     SliderModule,
     MultiSelectModule,
-    DropdownModule
+    DropdownModule,
+    FieldsetModule,
+    PasswordModule,
+    AvatarModule
   ]
 })
 export class UiModule { }

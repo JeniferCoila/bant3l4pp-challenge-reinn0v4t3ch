@@ -1,1 +1,100 @@
-<p>payments-done works!</p>
+<p-table #dt [value]="documents" [(selection)]="selectedDocuments" dataKey="id" styleClass="p-datatable-documents" [rowHover]="true"
+    [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading"
+    [paginator]="true" currentPageReportTemplate="Se muestra {first} al {last} de {totalRecords} entradas"
+    [filterDelay]="0" [globalFilterFields]="['name','dateIssue', 'dateIssue','status']" [responsive]="true">
+    <ng-template pTemplate="caption">
+        <div class="table-header">
+            Documentos por pagar
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Global Search" />
+            </span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 3rem">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th pSortableColumn="name">
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Concepto
+                    <p-sortIcon field="name"></p-sortIcon>
+                </div>
+            </th>
+            <th pSortableColumn="dateEmit">
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Fecha de Facturación
+                    <p-sortIcon field="dateEmit"></p-sortIcon>
+                </div>
+            </th>
+
+            <th pSortableColumn="dateIssue">
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Fecha de Vencimiento 
+                    <p-sortIcon field="dateIssue"></p-sortIcon>
+                </div>
+            </th>
+            <th pSortableColumn="pendingPayment">
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Deuda
+                    <p-sortIcon field="pendingPayment"></p-sortIcon>
+                </div>
+            </th>
+            <th pSortableColumn="status">
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Status
+                    <p-sortIcon field="status"></p-sortIcon>
+                </div>
+            </th>
+            <th >
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Recibo
+                </div>
+            </th>
+            <th >
+                <div class="p-d-flex p-jc-between p-ai-center">
+                </div>
+            </th>
+            <th style="width: 8rem"></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-customer>
+        <tr class="p-selectable-row">
+            <td>
+                <p-tableCheckbox [value]="customer"></p-tableCheckbox>
+            </td>
+            <td>
+                <span>{{customer.name}}</span>
+                
+            </td>
+            <td>
+                <span>{{customer.dateEmit | date: 'MM/dd/yyyy'}}</span>
+                
+            </td>
+            <td>
+                <span>{{customer.dateIssue | date: 'MM/dd/yyyy'}}</span>
+                
+            </td>
+            <td>
+                <span>{{ customer.pendingPayment | currency:'S/':'symbol'}}</span>
+            </td>
+            <td>
+                <span [class]="'customer-badge status-' + customer.status">{{customer.status}}</span>
+            </td>
+            <td style="text-align: center"> 
+                <a href="{{customer.invoice_url}}" target="_blank">
+                    <i class="pi pi-file-pdf" style="font-size: 2rem"></i>
+                </a>
+            </td>
+            <td style="text-align: center">
+                <button pButton type="button" class="p-button-secondary" label="PAGAR"></button>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="8">No se encontraron registros.</td>
+        </tr>
+    </ng-template>
+</p-table>

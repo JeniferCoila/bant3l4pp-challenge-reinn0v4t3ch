@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer, Representative } from '../../interfaces/document.interface';
+import { Document } from '../../interfaces/document.interface';
 import { DocumentService } from '../../../../../../../../libs/ose-commons/src/lib/services/document/document.service';
 
 @Component({
@@ -9,40 +9,26 @@ import { DocumentService } from '../../../../../../../../libs/ose-commons/src/li
 })
 export class PendingDocumentsComponent implements OnInit {
   
-      customers: Customer[];
+      documents: Document[];
   
-      selectedCustomers: Customer[];
-  
-      representatives: Representative[];
-  
+      selectedDocuments: Document[];
+    
       statuses: any[];
   
       loading: boolean = true;
   
       activityValues: number[] = [0, 100];
   
-      constructor(private customerService: DocumentService) { }
+      constructor(private documentService: DocumentService) { }
   
       ngOnInit() {
-          this.customerService.getCustomersLarge().then(customers => {
-              this.customers = customers;
+          this.documentService.getDocumentsSmall().then(documents => {
+              this.documents = documents;
               this.loading = false;
-  
-              this.customers.forEach(customer => customer.date = new Date(customer.date));
+              this.documents.forEach(document => document.dateEmit = new Date(document.dateEmit));
           });
   
-          this.representatives = [
-              {name: "Amy Elsner", image: 'amyelsner.png'},
-              {name: "Anna Fali", image: 'annafali.png'},
-              {name: "Asiya Javayant", image: 'asiyajavayant.png'},
-              {name: "Bernardo Dominic", image: 'bernardodominic.png'},
-              {name: "Elwin Sharvill", image: 'elwinsharvill.png'},
-              {name: "Ioni Bowcher", image: 'ionibowcher.png'},
-              {name: "Ivan Magalhaes",image: 'ivanmagalhaes.png'},
-              {name: "Onyama Limba", image: 'onyamalimba.png'},
-              {name: "Stephen Shaw", image: 'stephenshaw.png'},
-              {name: "Xuxue Feng", image: 'xuxuefeng.png'}
-          ];
+
   
           this.statuses = [
               {label: 'Unqualified', value: 'unqualified'},
