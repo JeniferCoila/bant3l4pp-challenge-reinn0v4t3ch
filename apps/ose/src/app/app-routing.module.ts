@@ -5,10 +5,7 @@ import { UserRol } from '@ose/commons/models';
 
 const routes: Routes = [
   { path: '', redirectTo: 'administrador', pathMatch: 'full' },
-  {
-    path: '',
-    loadChildren: () => import('./features/portal/portal.module').then(m => m.PortalModule)
-  },
+
   {
     path: 'administrador',
     canActivate: [OseAuthenticatedGuard, OseRolesGuard],

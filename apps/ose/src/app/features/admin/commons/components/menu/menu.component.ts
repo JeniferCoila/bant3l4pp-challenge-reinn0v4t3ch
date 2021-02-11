@@ -1,19 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MenuOption } from '../../../interfaces/menu-option.interface';
+import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import { AdminPresenter } from './../../../admin.presenter';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss'],
+  providers: [ AdminPresenter ]
 })
 export class MenuComponent implements OnInit {
-  @Input() name: string;
-  @Input() options: MenuOption[] = [];
   display: boolean = false;
   items: MenuItem[];
 
-  constructor() { }
+  constructor(public presenter: AdminPresenter) { }
 
   ngOnInit() {
     this.items = [
@@ -40,8 +39,9 @@ export class MenuComponent implements OnInit {
         {
             label:'Cerrar sesión',
             icon:'pi pi-fw pi-power-off',
-            target: '(click)="presenter.closeSession()"'
-        }
+            command: (event) => {
+                this.presenter.closeSession()
+            }}
     ];
     }
 
