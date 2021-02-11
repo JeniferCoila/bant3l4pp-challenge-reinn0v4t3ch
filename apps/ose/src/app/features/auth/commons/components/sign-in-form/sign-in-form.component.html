@@ -14,6 +14,7 @@
               <span class="p-float-label">
                 <input type="text" id="user_name" formControlName="email" pInputText />
                 <label for="user_name">Email</label>
+                <p *ngIf="emailError">{{ emailError }}></p>
               </span>
             </div>
             <div class="p-field p-col-11 b-login-card-content--form--input-group-psw">

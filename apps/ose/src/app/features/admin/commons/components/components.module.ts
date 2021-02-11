@@ -5,7 +5,6 @@ import { UiModule } from '../ui/ui.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { OseDefaultImgPipeModule } from '@ose/commons/pipe';
-import { OseInputFileModule } from '@ose/commons/components';
 import { ChartsModule } from 'ng2-charts';
 import { HomepageSliderComponent } from './homepage-slider/homepage-slider.component';
 import { HomepagePlansComponent } from './homepage-plans/homepage-plans.component';
@@ -28,7 +27,6 @@ const COMPONENTS = [
     ReactiveFormsModule,
     FormsModule,
     OseDefaultImgPipeModule,
-    OseInputFileModule,
     ChartsModule
   ]
 })

@@ -39,7 +39,7 @@ export class MenuComponent implements OnInit {
         {
             label:'Cerrar sesión',
             icon:'pi pi-fw pi-power-off',
-            command: (event) => {
+            command: (e) => {
                 this.presenter.closeSession()
             }}
     ];

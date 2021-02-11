@@ -26,5 +26,9 @@ $header-height: 48px;
     display: none;
 }
 
+::ng-deep.cdk-overlay-container {
+    display: none;
+  }
+
 
 

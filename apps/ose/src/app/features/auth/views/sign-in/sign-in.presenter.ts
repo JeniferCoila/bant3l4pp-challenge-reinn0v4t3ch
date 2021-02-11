@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class SignInPresenter {
+  display: boolean = false
 
   constructor(
     private authHttp: AuthHttp,
@@ -19,7 +20,7 @@ export class SignInPresenter {
 
   signIn(credentials: SignInCredentials) {
     const loading = this.dialog.open(OseLoadingComponent, { disableClose: true });
-    this.authHttp.signIn(credentials)
+     this.authHttp.signIn(credentials)
     .pipe(finalize(() => loading.close()))
     .subscribe(
       res => {

@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardPresenter } from './dashboard.presenter';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.view.html',
-  styleUrls: ['./dashboard.view.scss'],
-  providers: [ DashboardPresenter ]
+  styleUrls: ['./dashboard.view.scss']
 })
 export class DashboardView implements OnInit {
 
-  constructor(public presenter: DashboardPresenter) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.presenter.loadReport();
   }
 
 }
