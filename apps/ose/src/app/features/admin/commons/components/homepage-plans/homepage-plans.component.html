@@ -1,4 +1,4 @@
-<p-carousel styleClass="e-homepage-slider" [value]="plans" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+<p-carousel styleClass="e-homepage-slider" [value]="plans" [numVisible]="3" [numScroll]="4" [circular]="true" [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
         <h2>Nuestros Planes</h2>
         <p>Hemos diseñado estos paquetes bien agresivos para que no te quedes colgado, aseguramos la máxima velocidad
@@ -13,7 +13,7 @@
 
                 </div>
                 <div class="plan-item-content-box">
-                    <span>{{plan.price}}<strong>/mes</strong></span>
+                    <span class="plan-item-content-box-price">{{plan.price}}<strong>/mes</strong></span>
                     <div class="plan-item-content-box-benefits">
                         <li>
                             <ul *ngFor="let benefit of plan.benefits">

@@ -18,7 +18,7 @@
             }
 
             &-item {
-                margin: 0px 20px;
+                padding: 0px 20px;
                 width: 90%;
             }
         }
@@ -29,10 +29,13 @@
                     background-color: #FFED00;
                     border-radius: 10px 10px 10px 10px;
                     text-align: center;
-        
+                    h2 {
+                        margin-bottom: 0px;
+                    }
                     p {
                         font-size: 18px;
                         font-weight: 500;
+                        padding-bottom: 19px;
                     }
                 }
         
@@ -41,6 +44,10 @@
                     border-radius: 0px 0px 10px 10px;
                     background-color: #ffff;
                     height: 343px;
+                    &-price {
+                        display: block;
+                        text-align: center;
+                    }
                     &-benefits {
                         height: 180px;
                     }
