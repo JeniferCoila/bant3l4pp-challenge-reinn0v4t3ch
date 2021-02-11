@@ -1,22 +1,22 @@
-export interface Country {
-    name?: string;
-    code?: string;
-}
 
-export interface Representative {
+export interface PendingDocument {
+    id?: string;
     name?: string;
-    image?: string;
-}
-
-export interface Document {
-    id?: number;
-    name?: string;
-    country?: Country;
-    company?: string;
-    date?: string | Date;
+    amountBilled?: number;
+    dateEmit?: string | Date;
+    dateDue?: string | Date;
     status?: string;
-    activity?: number;
-    representative?: Representative;
-    verified?: boolean;
-    balance?: boolean;
+    period?: string;
+    bill_url?: string;
+}
+
+export interface PaidDocument {
+    id?: string;
+    name?: string;
+    amountBilled?: number;
+    dateEmit?: string | Date;
+    dateDue?: string | Date;
+    status?: string;
+    period?: string;
+    bill_url?: string;
 }

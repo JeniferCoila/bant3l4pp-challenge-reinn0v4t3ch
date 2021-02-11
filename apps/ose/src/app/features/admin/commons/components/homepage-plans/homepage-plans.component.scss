@@ -2,6 +2,12 @@
     ::ng-deep .e-homepage-slider {
         .p-carousel{
 
+            &-header {
+                p {
+                    text-align: center;
+                }
+            }
+
             &-container {
             background-color: #10286F;
             background-position: center center;
@@ -13,51 +19,71 @@
 
             &-item {
                 margin: 0px 20px;
+                width: 90%;
             }
         }
 
-
-    }
-}
-
-
-.plan-item {
-    &-content {
-        &-header {
-            background-color: #FFED00;
-            border-radius: 10px 10px 10px 10px;
-            text-align: center;
-            h2, p {
-                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                color: #10286F;
-
-            }
-            h2 {
-                font-size: 30px;
-                font-weight: 700;
-            }
-
-            p {
-                font-size: 18px;
-                font-weight: 500;
-            }
-        }
-
-        &-box {
-            padding: 20px;
-            border-radius: 0px 0px 10px 10px;
-            background-color: #ffff;
-            height: 380px;
-            li {
-                list-style: none;
-                ul {
-                    padding-left: 23px;
-                    span {
-                        margin-left: 10px;
+        .plan-item {
+            &-content {
+                &-header {
+                    background-color: #FFED00;
+                    border-radius: 10px 10px 10px 10px;
+                    text-align: center;
+        
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
                     }
                 }
-
+        
+                &-box {
+                    padding: 20px;
+                    border-radius: 0px 0px 10px 10px;
+                    background-color: #ffff;
+                    height: 343px;
+                    &-benefits {
+                        height: 180px;
+                    }
+                    &-buttons {
+                        text-align: center;
+                        &-request {
+                            button {
+                                width: 150px;
+                                padding: 8px 48px;
+                                width: 150px;
+                            }
+                            span {
+                                display: none;
+                            }
+                        }
+            
+                        &-more {
+                            button {
+                                width: 150px;
+                                border-radius: 2rem;
+                                width: 150px;
+                            }
+                            span {
+                                margin: 9px;
+                            }
+                        }
+                    }
+            
+                    li {
+                        list-style: none;
+                        ul {
+                            padding-left: 23px;
+                            span {
+                                margin-left: 10px;
+                            }
+                        }
+        
+                    }
+                }
             }
         }
+       
     }
 }
+
+

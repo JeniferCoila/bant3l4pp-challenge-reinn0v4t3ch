@@ -1,11 +1,22 @@
 
-export interface Document {
-    id?: number;
+export interface PendingDocument {
+    id?: string;
     name?: string;
-    pendingPayment?: number;
+    amountBilled?: number;
     dateEmit?: string | Date;
-    dateIssue?: string | Date;
+    dateDue?: string | Date;
     status?: string;
-    invoice_url?: string;
+    period?: string;
+    bill_url?: string;
+}
 
+export interface PaidDocument {
+    id?: string;
+    name?: string;
+    amountBilled?: number;
+    dateEmit?: string | Date;
+    dateDue?: string | Date;
+    status?: string;
+    period?: string;
+    bill_url?: string;
 }
